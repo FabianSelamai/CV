@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 50px 20px;
+}
+
+section {
+    padding: 40px 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.project {
+    background: white;
+    width: 60%;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* 📱 Mobile Styles */
+@media (max-width: 768px) {
+    .project {
+        width: 90%;
+    }
+}
