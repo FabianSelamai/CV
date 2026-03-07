@@ -1,8 +1,11 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f9fafb;
-    color: #333;
+    font-family: 'Inter', sans-serif;
+    background-color: #F8FAFC;
+    color: #0F172A;
 }
 
 /* Navigation */
@@ -10,9 +13,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 15px 60px;
     background: white;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-bottom: 1px solid #E2E8F0;
 }
 
 nav ul {
@@ -24,38 +27,41 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #333;
+    color: #0F172A;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 nav a:hover {
-    color: #0077ff;
+    color: #6366F1;
 }
 
 /* Header */
 header {
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(to right, #0077ff, #00c6ff);
+    padding: 140px 20px;
+    background: #0F172A;
     color: white;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 40px;
+    font-size: 48px;
+    margin-bottom: 10px;
 }
 
 header p {
     font-size: 20px;
     margin-top: 10px;
+    opacity: 0.9;
+    font-weight: 400;
 }
 
 /* Sections */
 section {
-    padding: 60px 20px;
+    padding: 80px 20px;
     max-width: 900px;
     margin: auto;
-    text-align: center;
+    text-align: left;
 }
 
 h2 {
@@ -63,13 +69,54 @@ h2 {
     font-size: 28px;
 }
 
+section h2 {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+section h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #6366F1;
+    margin: 8px auto 0;
+    border-radius: 2px;
+}
+
 /* Projects */
 .project {
     background: white;
-    padding: 25px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: #1E293B;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #334155;
+}
+
+section:not(:last-child) {
+    border-bottom: 1px solid #E2E8F0;
 }
 
 /* Skills */
@@ -81,11 +128,11 @@ h2 {
 }
 
 .skills-container span {
-    background: #0077ff;
-    color: white;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 14px;
+    background: #E0E7FF;
+    color: #4338CA;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
 }
 
 /* Footer */
@@ -107,4 +154,13 @@ footer {
     header h1 {
         font-size: 28px;
     }
+}
+
+body {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
